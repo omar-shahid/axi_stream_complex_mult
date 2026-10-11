@@ -68,7 +68,7 @@ module tb_axi_comp_mult;
 
       @(posedge clk);
       TVALID = p.valid;
-      TDATA = {p.d, p.c, p.d, p.a};
+      TDATA = {p.d, p.c, p.b, p.a};
       a = p.valid ? p.a : 0;
       b = p.valid ? p.b : 0;
       c = p.valid ? p.c : 0;
@@ -134,7 +134,7 @@ module tb_axi_comp_mult;
 
     fork
       gen();
-      //   scb();
+      scb();
     join
 
     repeat (3) @(posedge clk);

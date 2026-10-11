@@ -20,8 +20,6 @@ module axi_comp_mult (
 
   always_comb begin
 
-    // for now
-    TREADY = 1;
 
     a = TVALID ? TDATA[15:0] : 0;
     b = TVALID ? TDATA[31:16] : 0;
@@ -46,7 +44,7 @@ module axi_comp_mult (
       .z(z),
 
       .i_valid(TVALID),
-      .o_valid(o_valid)
+      .o_valid(TREADY)
 
   );
 
