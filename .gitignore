@@ -1,0 +1,26 @@
+# Build and simulation artifacts
+sim_build/
+work/
+transcript
+*.wlf
+wlft*
+*.log
+modelsim.ini
+vsim_stacktrace.vstf
+
+# Questa / ModelSim project and database files
+*.cr.mti
+*.mpf
+*.mti
+*.ucdb
+covhtmlreport/
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS artifacts
+Thumbs.db
+.DS_Store
